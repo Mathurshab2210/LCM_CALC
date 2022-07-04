@@ -1,0 +1,217 @@
+
+   body {
+	background: linear-gradient(-45deg, #ecd9d3, #e2ec94, #3a4901, #bffcee);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    .cntr{
+        height: 350px;
+        width: 50vw;
+        border: 5px solid black;
+        align-items: center;
+        background-color: beige;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    .cntr p{
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+        text-decoration: underline 2px;
+       
+    }
+    #results{
+        width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    }
+    #clr{
+        width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    }
+    #clr:hover{
+        color:black;
+        background-color: whitesmoke;
+        border: 2px solid cornflowerblue;
+        font-weight: bolder;
+
+    }
+    #results:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#results:active {
+    color: #000
+}
+
+#results:active:after {
+    background: transparent;
+}
+
+#results:hover:before {
+    opacity: 1;
+}
+
+#results:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+#display{
+    display: none;
+}
+@media(max-width:400px){
+    .cntr{
+        margin-top: 40%;
+        height: 400px;
+        width: 60vw;
+    }
+    #inp1{
+        height: 30px;
+       border-radius: 15px 10px;
+    }
+    #inp2{
+        height: 30px;
+       border-radius: 15px 10px;
+    }
+    label{
+        font-weight: bolder;
+    }
+}
+@media(max-width:500px){
+    .cntr{
+        margin-top: 40%;
+        height: 400px;
+        width: 60vw;
+    }
+    #inp1{
+        height: 30px;
+       border-radius: 15px 10px;
+    }
+    #inp2{
+        height: 30px;
+       border-radius: 15px 10px;
+    }
+    label{
+        font-weight: bolder;
+    }
+}
+ul {
+    position:absolute;
+    /* top:50%; */
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    position: relative;
+    width:60px;
+    height:60px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration:none;
+  }
+  
+  ul li a .fab {
+    widht: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+  }
+  
+  ul li:nth-child(1) a:hover .fab {
+    color: #a793db;
+  }
+  
+  ul li:nth-child(2) a:hover .fab {
+    color: #00aced;
+  }
+  
+  ul li:nth-child(3) a:hover .fab {
+    color: #dd4b39;
+  }
+  
+  ul li:nth-child(4) a:hover .fab {
+    color: #007bb6;
+  }
+  
+  ul li:nth-child(5) a:hover .fab {
+    color: #e4405f;
+  }
